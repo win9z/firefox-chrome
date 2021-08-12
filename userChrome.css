@@ -1,0 +1,198 @@
+
+/*colors*/
+
+:root {
+      --toolbar-bgcolor: #333333 !important;
+      --custom-border-bg: #909090 !important;
+      --myveryowninactivetab-bg: #222222 !important;
+      /*--myveryownhoveredtab-bg: purple !important;*/
+      --toolbar-fgcolor: #222222 !important;
+      --urlbarcolor: #ffffff !important;
+/*       --newtab-button-marginleft: -14px !important; /*adjust to move windows new tab button*/ */
+      --tab-toolbar-navbar-overlap: 0px !important; /* fix for full screen mode */
+      --tab-min-height: 22px !important;
+}
+
+#searchbar:focus-within:-moz-lwtheme {
+    color: #00F0F0;
+}
+
+#titlebar, #navigator-toolbox {
+    background-image: none !important; 
+/*     border-radius: 5px 5px 0px 0px !important;   */
+    background-color: var(--toolbar-fgcolor) !important;
+}
+
+/* layout */
+
+#nav-bar {
+    box-shadow: 0px -1px 0px 0px  var(--custom-border-bg) !important;
+}
+
+
+tab>.tab-stack>.tab-background {
+    transform: perspective(10px) rotateX(3deg);
+    background-color: var(--myveryowninactivetab-bg) !important; /**/
+    outline: 0px solid transparent !important;
+    border: 1px solid transparent !important;
+    border-bottom-width: 0px !important;
+    border-image: linear-gradient(to bottom, var(--custom-border-bg) 66%, var(--toolbar-bgcolor) 68%) 9 !important;
+    margin: 0px 10px 0px 10px !important;
+    box-shadow: inset 1px 1px 0px 0px var(--toolbar-bgcolor) !important;
+}
+
+
+.tabbrowser-tab[fadein]:not([pinned]){
+    min-width: 150px !important; /* 160 */
+    max-width: 250px !important;
+}
+
+
+tab[visuallyselected]>.tab-stack>.tab-background, .tab-content[visuallyselected]/* ,tab:not(selected):hover>.tab-stack>.tab-background, tab:hover*/{
+/*         background-color: var(--toolbar-bgcolor) !important; */
+    background: linear-gradient(#565962, #333333) !important;
+}
+
+
+/*remove boxshadow for hovered tabs
+tab:not([selected]):hover>.tab-stack>.tab-background{
+}
+*/
+
+
+#tabbrowser-tabs {
+    margin-left: 10px !important;
+    overflow: visible !important;
+    border: none !important;
+}
+
+
+
+  /*rightshift*/
+.tabbrowser-tab:not([pinned]) {
+    margin: 0 -15px 0 0px !important;
+}
+
+  /*rightshift tabcontent*/
+.tab-content {
+    padding: 0 20px !important;
+}
+
+
+tab:before {
+    border: none !important; 
+}
+
+
+/* use zindex to move hovered tab to fg, ideally second to active tab
+.tab-content:not([selected]):hover, tab.tabbrowser-tab:not([selected]):hover/* ,tab:not(selected):hover>.tab-stack>.tab-background, tab:hover*/ /* ,tab:not(selected):hover>.tab-stack>.tab-background, tab:hover{*/
+   /* background-color: transparent !important;
+    background-image: none !important;
+    animation: zindex .1s ease-in normal;
+    transition-timing-function: linear;
+    animation-fill-mode: forwards;
+}*/
+
+
+/*new tab button, for tabbrowser & normal tab view*/
+
+#tabs-newtab-button > * , #new-tab-button > * {
+    background-color: --myveryowninactivetab-bg !important;
+    height: 17px !important;
+    width: 30px !important;
+    border-radius: 2px !important;
+    list-style-image: none !important;
+    -moz-transform: skewX(28deg) !important;
+    outline: 5px solid transparent !important;
+    margin-left: var(--newtab-button-marginleft) !important;
+    margin-bottom: -2px !important;
+    border: solid 1px var(--custom-border-bg) !important;
+    background-color: var(--toolbar-fgcolor) !important;
+    box-shadow: inset 1px 1px 0px 0px var(--toolbar-bgcolor) !important;
+}
+
+
+/*fix margins of newtab button for tab overflow*/
+ #new-tab-button > * {
+    -moz-transform: skewX(20deg) !important; /* ********************** */
+    margin-left: 7px !important;
+    margin-right: 5px !important; 
+}
+
+#tabs-newtab-button:hover > * , #new-tab-button:hover > *{
+    background-color: var(--toolbar-bgcolor) !important;
+}
+
+
+/*cleaning up*/
+
+/*move newtab button to the right*/
+#tabs-newtab-button {
+    margin-left: 25px !important;
+}
+
+
+.tabbrowser-tab::after,
+.tabbrowser-tab::before {
+    display: none !important;
+}
+
+
+.tab-line {
+    display: none !important;
+}
+
+
+hbox.titlebar-spacer {
+  display: none;
+  border-right: none !important;
+}
+
+/*??*/
+[tabsintitlebar]:root:not([extradragspace]) .tabbrowser-tab::after,
+.tabbrowser-tab:hover::after,
+#tabbrowser-tabs:not([movingtab])>.tabbrowser-tab[beforehovered]::after {
+    border: none !important;
+}
+
+/*urlbar*/
+
+
+#urlbar-background {
+  /*background-color: var(--urlbarcolor) !important;*/
+  border-radius: 2px !important;
+  /*border-color: var(--custom-border-bg) !important;*/
+  background-color: #202124 !important;
+  background-image: none !important;
+  backdrop-filter: blur(20px) !important;
+}
+
+.titlebar-close:hover { 
+    background: #e6002b !important;
+}
+
+/*
+#PersonalToolbar{
+    display: block !important;
+    box-sizing: content-box !important;
+    width: -moz-available !important;
+    max-width: unset !important; 
+    height: auto !important;
+    max-height: unset !important;
+    padding: 5px !important;
+    z-index: 1 !important; 
+    position: absolute !important;
+    -moz-appearance: none !important;
+    background-image: none !important;
+    background-color: rgba(255,255,250,.5) !important;
+    backdrop-filter: blur(20px) !important;
+    box-shadow: 0px 1px 7px -3px #000 !important;
+}
+/* not sure where this is from, 
+#tabbrowser-tabs:not([movingtab])>.tabbrowser-tab[beforeselected-visible]::after,
+#tabbrowser-tabs[movingtab]>.tabbrowser-tab[visuallyselected]::before,
+.tabbrowser-tab[visuallyselected]::after {
+    margin-top: 0;
+    margin-bottom: -3px !important;
+    border: none !important;
+}*/
