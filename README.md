@@ -1,4 +1,4 @@
-# firefox-chrome-tabs
+# firefox-chrome
 userchrome.css for latest firefox with dark theme
 
 makes tabs look like in old chrome versions
