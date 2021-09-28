@@ -51,7 +51,7 @@ tab>.tab-stack>.tab-background {
 }
 
 
-tab[visuallyselected]>.tab-stack>.tab-background, .tab-content[visuallyselected]/* ,tab:not(selected):hover>.tab-stack>.tab-background, tab:hover*/ {
+tab[visuallyselected]>.tab-stack>.tab-background, .tab-content[visuallyselected]/* ,tab:not(selected):hover>.tab-stack>.tab-background, tab:hover*/{
 /*         background-color: var(--toolbar-bgcolor) !important; */
     background: linear-gradient(#565962, #333333) !important;
 }
@@ -107,8 +107,8 @@ tab:before {
     list-style-image: none !important;
     -moz-transform: skewX(28deg) !important;
     outline: 5px solid transparent !important;
-    margin-left: var(--newtab-button-marginleft) !important;
-    margin-bottom: -2px !important;
+    margin-left: 8px !important;
+/*     margin-bottom: -2px !important; */
     border: solid 1px var(--custom-border-bg) !important;
     background-color: var(--toolbar-fgcolor) !important;
     box-shadow: inset 1px 1px 0px 0px var(--toolbar-bgcolor) !important;
@@ -122,18 +122,12 @@ tab:before {
     margin-right: 5px !important; 
 }
 
-#tabs-newtab-button:hover > * , #new-tab-button:hover > * {
+#tabs-newtab-button:hover > * , #new-tab-button:hover > *{
     background-color: var(--toolbar-bgcolor) !important;
 }
 
 
 /*cleaning up*/
-
-/*move newtab button to the right*/
-#tabs-newtab-button {
-    margin-left: 25px !important;
-}
-
 
 .tabbrowser-tab::after,
 .tabbrowser-tab::before {
@@ -152,7 +146,8 @@ hbox.titlebar-spacer {
 }
 
 /*??*/
-[tabsintitlebar]:root:not([extradragspace]) .tabbrowser-tab::after, .tabbrowser-tab:hover::after,
+[tabsintitlebar]:root:not([extradragspace]) .tabbrowser-tab::after,
+.tabbrowser-tab:hover::after,
 #tabbrowser-tabs:not([movingtab])>.tabbrowser-tab[beforehovered]::after {
     border: none !important;
 }
@@ -174,7 +169,7 @@ hbox.titlebar-spacer {
 }
 
 /*
-#PersonalToolbar {
+#PersonalToolbar{
     display: block !important;
     box-sizing: content-box !important;
     width: -moz-available !important;
