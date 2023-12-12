@@ -1,6 +1,8 @@
 # firefox-chrome
-userchrome.css for latest firefox with dark theme
+userchrome.css for firefox which makes tab panel look like in old chrome versions
 
-makes tabs look like in old chrome versions
+works well for firefox v120 with default dark theme
 
-forked from https://gitlab.com/brudolp/userChrome/-/tree/master/google-chrome-style
+slightly modified and updated for new browser version, was found [here](https://gitlab.com/brudolp/userChrome/-/tree/master/google-chrome-style)
+
+![screenshot](./userchrome.png)
