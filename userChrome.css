@@ -1,4 +1,3 @@
-
 /*colors*/
 
 :root {
@@ -151,6 +150,11 @@ hbox.titlebar-spacer {
 #tabbrowser-tabs:not([movingtab])>.tabbrowser-tab[beforehovered]::after {
     border: none !important;
 }
+
+.tabbrowser-tab:not([visuallyselected=true], [multiselected]), .tabbrowser-tab:-moz-lwtheme {
+  color: #FFF !important; 
+}
+
 
 /*urlbar*/
 
