@@ -104,7 +104,7 @@ tab:before {
     width: 30px !important;
     border-radius: 2px !important;
     list-style-image: none !important;
-    -moz-transform: skewX(28deg) !important;
+    transform: skewX(28deg) !important;
     outline: 5px solid transparent !important;
     margin-left: 8px !important;
 /*     margin-bottom: -2px !important; */
@@ -116,7 +116,7 @@ tab:before {
 
 /*fix margins of newtab button for tab overflow*/
  #new-tab-button > * {
-    -moz-transform: skewX(20deg) !important; /* ********************** */
+    transform: skewX(20deg) !important; /* ********************** */
     margin-left: 7px !important;
     margin-right: 5px !important; 
 }
